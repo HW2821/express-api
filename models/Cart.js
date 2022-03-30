@@ -8,4 +8,6 @@ const CartSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-module.exports = mongoose.model("Cart", CartSchema)
+const CartCollection = mongoose.model("Cart", CartSchema)
+
+module.exports = CartCollection
