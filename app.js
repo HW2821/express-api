@@ -1,5 +1,6 @@
 require("dotenv").config()
 const express = require("express")
+const cors = require("cors")
 const app = express()
 const mongoose = require("mongoose")
 const userRoute = require("./routes/user")
@@ -16,6 +17,11 @@ mongoose
   .catch((err) => console.log(err))
 
 //use middlewares
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+)
 app.use(express.json())
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
