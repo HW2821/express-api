@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth")
 const productRoute = require("./routes/product")
 const cartRoute = require("./routes/cart")
 const orderRoute = require("./routes/order")
+const paymentRoute = require("./routes/payment")
 
 //mongoDB connection
 mongoose
@@ -20,7 +21,8 @@ app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
 app.use("/api/products", productRoute)
 app.use("/api/carts", cartRoute)
-app.use("/api/order", orderRoute)
+app.use("/api/orders", orderRoute)
+app.use("/api/payment", paymentRoute)
 
 //start server
 app.listen(process.env.PORT || 5000, () => {
