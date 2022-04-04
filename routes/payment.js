@@ -1,9 +1,11 @@
 const { verifyToken, admin, authorize } = require("./veryfiyToken")
 const router = require("express").Router()
 
-router.get("/payment", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    res.status(200).json("payment done")
+    setTimeout(() => {
+      res.status(200).json("支付成功")
+    }, 1000)
   } catch (error) {
     res.status(500).json(error.message)
   }
