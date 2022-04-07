@@ -42,8 +42,8 @@ app.use("/api/orders", orderRoute)
 app.use("/api/payment", paymentRoute)
 
 //start server
-app.listen(process.env.PORT || 5000, () => {
-  console.log("backend server is running")
-})
+// app.listen(process.env.PORT || 5000, () => {
+//   console.log("backend server is running")
+// })
 
 module.exports = app
