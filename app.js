@@ -23,7 +23,7 @@ app.use(
       "192.168.0.225",
       "http://localhost:3000",
       "https://hw-ecommerce-demo.herokuapp.com",
-      "https://nextjs-ecommerce-client-hw2821.vercel.app",
+      "https://nextjs-ecommerce-client-henna.vercel.app",
     ],
   })
 )
