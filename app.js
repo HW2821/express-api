@@ -19,7 +19,12 @@ mongoose
 // use middlewares
 app.use(
   cors({
-    origin: ["192.168.0.225", "http://localhost:3000", "https://hw-ecommerce-demo.herokuapp.com"],
+    origin: [
+      "192.168.0.225",
+      "http://localhost:3000",
+      "https://hw-ecommerce-demo.herokuapp.com",
+      "https://nextjs-ecommerce-client-8lr8zfc55-hw2821.vercel.app",
+    ],
   })
 )
 
