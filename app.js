@@ -16,13 +16,18 @@ mongoose
   .then(() => console.log("mongoDB connected"))
   .catch((err) => console.log(err))
 
-//use middlewares
+// use middlewares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["192.168.0.225", "http://localhost:3000"],
   })
 )
 app.use(express.json())
+app.use((req, res, next) => {
+  console.log(req.method, req.headers)
+  next()
+  // console.log(res)
+})
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
 app.use("/api/products", productRoute)

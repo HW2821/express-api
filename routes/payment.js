@@ -1,7 +1,7 @@
 const { verifyToken, admin, authorize } = require("./veryfiyToken")
 const router = require("express").Router()
 
-router.get("/", async (req, res) => {
+router.get("/:id", verifyToken, authorize, async (req, res) => {
   try {
     setTimeout(() => {
       res.status(200).json("支付成功")

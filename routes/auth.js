@@ -21,6 +21,7 @@ router.post("/register", async (req, res) => {
 
 //登录 req.body = { username, password }
 router.post("/login", async (req, res) => {
+  console.log("登录")
   try {
     //查找用户
     const user = await User.findOne({ username: req.body.username })
