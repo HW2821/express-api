@@ -22,6 +22,9 @@ app.use(
     origin: ["192.168.0.225", "http://localhost:3000"],
   })
 )
+app.get("/", (req, res) => {
+  res.send("api server")
+})
 app.use(express.json())
 app.use((req, res, next) => {
   console.log(req.method, req.headers)
